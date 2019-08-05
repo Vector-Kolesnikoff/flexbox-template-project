@@ -1,0 +1,61 @@
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $small + 1) {
+    padding: $gutter + $gutter / 2 $gutter / 2; // 45px 15px (gutter = 30px)
+  }
+
+  @media (max-width: $small) {
+    padding: $gutter / 2 $gutter / 2; // 15px 15px
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+
+    @media (min-width: $small + 1) {
+      max-width: 400px;
+      margin-bottom: $gutter; // 30px
+    }
+
+    @media (max-width: $small) {
+      max-width: 250px;
+      margin-bottom: $gutter / 2; // 60px
+    }
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    color: $light-color;
+    font-family: $header-font;
+    font-weight: 300;
+    letter-spacing: 5px;
+
+      @media (min-width: $small + 1) {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+
+      @media (max-width: $small) and (min-width: $xsmall + 1) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+
+      @media (max-width: $xsmall) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+  }
+
+  &__subtitle {
+      display: block;
+      text-align: center;
+      color: $light-color;
+      font-weight: 700;
+      letter-spacing: 3px;
+  }
+}

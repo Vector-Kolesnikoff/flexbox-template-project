@@ -1,0 +1,48 @@
+// @mixin bg-color {
+//   background: rgba($dark-color, 0.5);
+// }
+
+@mixin text-shadow {
+  text-shadow: 1px 1px 3px $dark-color, 1px 1px 10px $dark-color;
+}
+
+@mixin bg-color($alfa: 0.5, $color: $dark-color) {
+  background: rgba($color, $alfa);
+}
+
+// @mixin text-shortener {
+//   display: block;
+//   overflow: hidden;
+
+//   width: 100%;
+
+//   white-space: nowrap;
+//   text-overflow: ellipsis;
+// }
+
+
+
+// @mixin block-header {
+//   padding-bottom: 10px;
+
+//   letter-spacing: 1.5px;
+
+//   border-bottom: 1px solid lighten($dark-color, 20%);
+
+//   font-family: $font-header;
+//   font-weight: 300;
+// }
+
+// @mixin block-with-text {
+//   display: -webkit-box;
+//   overflow: hidden;
+
+//   max-height: 75px;
+
+//   font-size: 13px;
+//   line-height: 19px;
+
+//   -webkit-box-orient: vertical;
+//   -webkit-line-clamp: 4;
+// }
+
