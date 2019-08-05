@@ -608,16 +608,16 @@ p {
 
 .header-menu__btn.active .header-menu__btn-row:first-child {
   top: 6px;
-  -webkit-transform: rotate(-135deg);
-      -ms-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 
 .header-menu__btn.active .header-menu__btn-row:last-child {
   top: -6px;
-  -webkit-transform: rotate(-225deg);
-      -ms-transform: rotate(-225deg);
-          transform: rotate(-225deg);
+  -webkit-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+          transform: rotate(225deg);
 }
 
 .header-menu__btn.active .header-menu__btn-row:nth-child(2) {
@@ -717,6 +717,9 @@ p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .header-menu__list-item:first-child {
+    margin-top: 5px;
   }
   .header-menu__list-item:last-child {
     margin-bottom: 5px;

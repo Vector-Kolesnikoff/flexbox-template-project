@@ -35,12 +35,12 @@
     &.active .header-menu__btn-row {
       &:first-child {
           top: 6px;
-          transform: rotate(-135deg);
+          transform: rotate(135deg);
       }
   
       &:last-child {
           top: -6px;
-          transform: rotate(-225deg);
+          transform: rotate(225deg);
       }
   
       &:nth-child(2) {
@@ -72,8 +72,13 @@
 
     &-item {
       @media (max-width: 768px) {
+        
+        &:first-child {
+          margin-top: 5px;
+        }
+
         &:last-child {
-            margin-bottom: 5px;
+          margin-bottom: 5px;
         }
       }
 
@@ -84,8 +89,8 @@
         border-radius: 4px;
 
         @media (max-width: $small) {
-            margin-top: 0;
-            margin-bottom: 0;
+          margin-top: 0;
+          margin-bottom: 0;
         }
 
         &:hover,
