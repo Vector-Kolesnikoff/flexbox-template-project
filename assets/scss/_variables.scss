@@ -1,0 +1,34 @@
+$xlarge: 1380px;
+$large: 1200px;
+$middle: 992px;
+$small: 768px;
+$xsmall: 576px;
+$xxsmall: 480px;
+
+$left-sidebar-width: 220px;
+$right-sidebar-width: 240px;
+
+$gutter: 30px;
+
+$header-font: "Lora", serif;
+$base-font: "Roboto", sans-serif;
+
+@media (min-width: $large + 1) {
+    // > 1200
+}
+
+@media (max-width: $large) and (min-width: $middle + 1) {
+    // 992 .. 1200
+}
+
+@media (max-width: $middle) and (min-width: $small + 1) {
+    // 768 .. 992
+}
+
+@media (max-width: $small) and (min-width: $xsmall + 1) {
+    // 576 .. 768
+}
+
+@media (max-width: $xsmall) {
+    // < 576
+}

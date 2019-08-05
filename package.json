@@ -1,0 +1,35 @@
+{
+  "name": "flexbox-template-project",
+  "version": "1.0.0",
+  "description": "Вёрстка на flexbox",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vector-Kolesnikoff/flexbox-template-project.git"
+  },
+  "keywords": [
+    "flexbox"
+  ],
+  "author": "Dmitriy Kolesnikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vector-Kolesnikoff/flexbox-template-project/issues"
+  },
+  "homepage": "https://github.com/Vector-Kolesnikoff/flexbox-template-project#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "browser-sync": "^2.26.3",
+    "css-mqpacker": "^7.0.0",
+    "sort-css-media-queries": "^1.4.3",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.0",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2"
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../libs/normalize-scss/sass/normalize/import-now";
+
+@import "variables";
+@import "skin";
+@import "mixins";
+
+@import "common";
+@import "header/header";
+@import "header/logo";
+@import "header/menu";
+@import "main";
+@import "aside/left";
+@import "aside/right";
+@import "widgets/widgets";
+@import "widgets/search";
+@import "widgets/categories";
+@import "widgets/news";
+@import "footer";
