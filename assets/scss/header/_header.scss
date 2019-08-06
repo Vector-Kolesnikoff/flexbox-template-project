@@ -1,7 +1,7 @@
 .header {
-  background: rgba($dark-color, 0.5);
-  overflow: hidden;
-  margin-bottom: 30px;
+  background-color: rgba($dark-color, 0.5);
+  margin-bottom: $gutter;
   min-height: 100px;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 7px 7px;
+  overflow: hidden; // чтобы не выходил за пределы скруглённых углов в хедер-меню.
 }

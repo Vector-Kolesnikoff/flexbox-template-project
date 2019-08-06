@@ -5,7 +5,7 @@
 
    @include bg-color(0.3);
 
-  &__btn {
+  &__burger {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -13,17 +13,17 @@
     height: 50px;
     cursor: pointer;
     
-    @include bg-color(0.2);
+    @include bg-color(0.3);
 
-    @media (min-width: 769px) {
-        display: none;
+    @include sm-min {
+      display: none;
     }
 
-    @media (max-width: 768px) {
-        display: flex;
+    @include sm {
+      display: flex;
     }
 
-    &-row {
+    &-line {
       position: relative;
       width: 60%;
       height: 2px;
@@ -32,19 +32,20 @@
       background-color: $light-color;
     }
 
-    &.active .header-menu__btn-row {
+    &.active .header-menu__burger-line {
+
       &:first-child {
-          top: 6px;
-          transform: rotate(135deg);
+        top: 6px;
+        transform: rotate(135deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
       }
   
       &:last-child {
-          top: -6px;
-          transform: rotate(225deg);
-      }
-  
-      &:nth-child(2) {
-          opacity: 0;
+        top: -6px;
+        transform: rotate(225deg);
       }
     }
   }
@@ -54,11 +55,11 @@
     padding: 0;
     list-style: none;
 
-    @media (min-width: $small + 1) {
+    @include sm-min {
       display: flex;
     }
 
-    @media (max-width: $small) {
+    @include sm {
       display: none;
       width: 100%;
       text-align: center;
@@ -71,7 +72,7 @@
     }
 
     &-item {
-      @media (max-width: 768px) {
+      @include sm {
         
         &:first-child {
           margin-top: 5px;
@@ -86,9 +87,9 @@
         display: block;
         margin: 5px;
         padding: 10px 15px;
-        border-radius: 4px;
+        border-radius: 5px;
 
-        @media (max-width: $small) {
+        @include sm {
           margin-top: 0;
           margin-bottom: 0;
         }

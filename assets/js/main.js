@@ -4,8 +4,8 @@
       $('body').niceScroll();
   });
 
-  $('.header-menu__btn').click(function() {
-  // $('.header-menu__btn').on('ckick', function() {
+  $('.header-menu__burger').click(function() {
+  // $('.header-menu__burger').on('ckick', function() {
     $(this).toggleClass('active');
     $('.header-menu__list').toggleClass('active');
   });

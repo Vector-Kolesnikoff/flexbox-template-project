@@ -456,6 +456,13 @@ template {
   display: none;
 }
 
+/* ul */
+/* xl */
+/* lg */
+/* md */
+/* sm */
+/* xs */
+/* xx */
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -472,26 +479,14 @@ html {
   line-height: 1.5em;
 }
 
-html {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  line-height: 1.5em;
-}
-
 body {
-  overflow-x: hidden;
-  width: 100%;
-  max-width: 1380px;
-  margin: 0 auto;
-  -webkit-transition: opacity 1s ease 0s;
-  -o-transition: opacity 1s ease 0s;
-  transition: opacity 1s ease 0s;
-  opacity: 1;
   background-color: #d8b036;
   background-image: url("../img/global-bg.jpg");
   background-attachment: fixed;
   background-position: top center;
   background-size: cover;
+  width: 100%;
+  max-width: 1380px;
 }
 
 a {
@@ -503,29 +498,12 @@ a:hover, a:focus {
   color: #e12727;
 }
 
-p {
-  color: #cccccc;
-}
-
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.img-responsive {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
 .header {
-  background: rgba(0, 0, 0, 0.5);
-  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
   min-height: 100px;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 7px 7px;
+  overflow: hidden;
 }
 
 .header-logo {
@@ -578,7 +556,7 @@ p {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.header-menu__btn {
+.header-menu__burger {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -592,10 +570,10 @@ p {
   width: 50px;
   height: 50px;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.header-menu__btn-row {
+.header-menu__burger-line {
   position: relative;
   width: 60%;
   height: 2px;
@@ -606,22 +584,22 @@ p {
   background-color: #eeeeee;
 }
 
-.header-menu__btn.active .header-menu__btn-row:first-child {
+.header-menu__burger.active .header-menu__burger-line:first-child {
   top: 6px;
   -webkit-transform: rotate(135deg);
       -ms-transform: rotate(135deg);
           transform: rotate(135deg);
 }
 
-.header-menu__btn.active .header-menu__btn-row:last-child {
+.header-menu__burger.active .header-menu__burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.header-menu__burger.active .header-menu__burger-line:last-child {
   top: -6px;
   -webkit-transform: rotate(225deg);
       -ms-transform: rotate(225deg);
           transform: rotate(225deg);
-}
-
-.header-menu__btn.active .header-menu__btn-row:nth-child(2) {
-  opacity: 0;
 }
 
 .header-menu__list {
@@ -644,7 +622,7 @@ p {
   display: block;
   margin: 5px;
   padding: 10px 15px;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .header-menu__list-item a:hover, .header-menu__list-item a:focus {
@@ -659,7 +637,7 @@ p {
   text-shadow: 1px 1px 3px #000000, 1px 1px 10px #000000;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .header-logo {
     padding: 45px 15px;
   }
@@ -671,7 +649,7 @@ p {
     font-size: 3rem;
     line-height: 3.5rem;
   }
-  .header-menu__btn {
+  .header-menu__burger {
     display: none;
   }
   .header-menu__list {
@@ -681,23 +659,19 @@ p {
   }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1200px) {
   body {
     padding: 0 30px;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199.8px) {
   body {
     padding: 0 15px;
   }
-  .container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.8px) {
   .header-logo {
     padding: 15px 15px;
   }
@@ -705,7 +679,7 @@ p {
     max-width: 250px;
     margin-bottom: 15px;
   }
-  .header-menu__btn {
+  .header-menu__burger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -730,14 +704,14 @@ p {
   }
 }
 
-@media (max-width: 768px) and (min-width: 577px) {
+@media (max-width: 767.8px) and (min-width: 576px) {
   .header-logo__title {
     font-size: 2rem;
     line-height: 2.5rem;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.8px) {
   .header-logo__title {
     font-size: 1.5rem;
     line-height: 2rem;

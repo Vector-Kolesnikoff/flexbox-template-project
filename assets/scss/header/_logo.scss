@@ -3,11 +3,11 @@
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: $small + 1) {
+  @include sm-min {
     padding: $gutter + $gutter / 2 $gutter / 2; // 45px 15px (gutter = 30px)
   }
 
-  @media (max-width: $small) {
+  @include sm {
     padding: $gutter / 2 $gutter / 2; // 15px 15px
   }
 
@@ -15,12 +15,12 @@
     display: block;
     width: 100%;
 
-    @media (min-width: $small + 1) {
+    @include sm-min  {
       max-width: 400px;
       margin-bottom: $gutter; // 30px
     }
 
-    @media (max-width: $small) {
+    @include sm {
       max-width: 250px;
       margin-bottom: $gutter / 2; // 60px
     }
@@ -35,27 +35,27 @@
     font-weight: 300;
     letter-spacing: 5px;
 
-      @media (min-width: $small + 1) {
-        font-size: 3rem;
-        line-height: 3.5rem;
-      }
+    @include sm-min {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
 
-      @media (max-width: $small) and (min-width: $xsmall + 1) {
-        font-size: 2rem;
-        line-height: 2.5rem;
-      }
+    @include sm-xs {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
 
-      @media (max-width: $xsmall) {
-        font-size: 1.5rem;
-        line-height: 2rem;
-      }
+    @include xs {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
   }
 
   &__subtitle {
-      display: block;
-      text-align: center;
-      color: $light-color;
-      font-weight: 700;
-      letter-spacing: 3px;
+    display: block;
+    text-align: center;
+    color: $light-color;
+    font-weight: 700;
+    letter-spacing: 3px;
   }
 }
