@@ -45,17 +45,19 @@ a {
   }
 }
 
+.outer {
+  display: flex;
+
+  @include lg {
+    flex-wrap: wrap;
+  }
+}
+
 // p {
 //   color: $gray-color;
 // }
 
-// .container {
-//   display: flex;
 
-//   @media (max-width: $large) {
-//       flex-wrap: wrap;
-//   }
-// }
 
 // .img-responsive {
 //   display: block;

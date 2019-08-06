@@ -1,0 +1,162 @@
+.main {
+  flex-grow: 1;
+
+  /* main-breadcrumbs */
+  &-breadcrumbs {
+    padding: 8px 12px;
+    margin-bottom: $gutter;
+    width: 100%;
+    border-radius: 8px;
+    text-align: right;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, rgba($dark-color, 0) 0%, rgba($dark-color, 0.8) 100%); // градиент (лево -> право)
+
+    a {
+      font-weight: bold;
+
+      &:hover {
+        @include text-shadow;
+      }
+    }
+
+    span {
+      color: $gray-color;
+      margin-right: 7px;
+      // position: relative;
+    }
+
+    i {
+      color: $gray-color;
+      font-weight: bold;
+    }
+  }
+  /* /main-breadcrumbs */
+
+  /* main-content */
+  &-content {
+
+    /* main-content__title */
+    &__title {
+      margin: $gutter 0;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: linear-gradient(to right, rgba($dark-color, 0.8) 0%, rgba($dark-color, 0.5) 90%, rgba($dark-color, 0) 100%);
+      font-family: $header-font;
+      color: $light-color;
+      font-weight: 300;
+      letter-spacing: 3px;
+      line-height: 1.5em;
+
+      @include sm-min {
+          font-size: 2rem;
+      }
+      @include sm {
+          font-size: 1.5rem;
+      }
+    }
+    /* / main-content__title */
+
+    &__grid {
+
+      display: flex;
+      flex-wrap: wrap;
+
+      margin-top: -$gutter / 4; // - 7.5px
+      margin-right: -$gutter / 4; // - 7.5px
+      margin-bottom: $gutter - $gutter / 4; // 22.5px
+      margin-left: -$gutter / 4; // - 7.5px
+
+      .grid-item {
+        padding: $gutter / 4; // 7.5px
+
+        @include sm-min  {
+        flex: 0 0 33.3333%;
+        }
+
+        @include sm-xx {
+        flex: 0 0 50%;
+        }
+
+        @include xx {
+        flex: 0 0 100%;
+        }
+
+        &__container {
+          position: relative;
+          overflow: hidden;
+          border: 5px solid rgba($dark-color, 0.5);
+          border-radius: 8px;
+
+          /* grid-item__container-title */
+          &-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 7px;
+            width: 100%;
+            height: $gutter; //30px
+            background-color: rgba($dark-color, 0.5);
+            transition: background-color 0.5s;
+            text-align: center;
+            color: $light-color;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1em;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px $dark-color;
+            
+            @include text-cropped; // Обрезает текст, добавляет ..., не позволяет переносить строку
+          }
+          /* / grid-item__container-title */
+          
+          &-img {
+
+            .item-img {
+              display: block;
+              width: 100%;
+              max-width: 100%;
+              height: auto;
+            }
+          }
+
+          &-description {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin: 0;
+            padding: $gutter / 2;// 15px
+            width: 100%;
+            height: calc(100% - 27px);
+            text-align: center;
+            // transition-property: top; //description поднимается
+            // transition-duration: 0.5s; // за полсекунды
+            // transition-timing-function: ease-out; // быстрое начало, плавный конец подъёма
+            transition: top 0.5s ease-out, background-color 0.5s ease-out;// description поднимается | за полсекунды | быстрое начало, плавный конец подъёма, цвет затемняется;
+          }
+        }
+
+        /* Hover&Focus */
+        &:hover,
+        &:focus {
+          
+          .grid-item__container-title {
+            color: $main-color;
+  
+            @include bg-color(0.7);
+            @include text-shadow;
+          }
+
+          .grid-item__container-description {
+            top: $gutter; // 30px;
+            color: $light-color;
+  
+            @include bg-color(0.7);
+          }
+        }
+        /* / Hover&Focus */
+      }
+    }
+  }
+  /* main-content */
+}

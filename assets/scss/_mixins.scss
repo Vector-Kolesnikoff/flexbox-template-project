@@ -10,15 +10,13 @@
   background: rgba($color, $alfa);
 }
 
-// @mixin text-shortener {
-//   display: block;
-//   overflow: hidden;
-
-//   width: 100%;
-
-//   white-space: nowrap;
-//   text-overflow: ellipsis;
-// }
+@mixin text-cropped {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 
 

@@ -214,6 +214,12 @@
   }
 }
 
+@mixin sm-xx {
+  @media (max-width: $sm - 0.2) and (min-width: $xx) {
+    @content;
+  }
+}
+
 /* xs */
 @mixin xs-min {
   @media (min-width: $xs) {
