@@ -1,0 +1,26 @@
+%widget {
+  border-bottom: 1px solid lighten($dark-color, 20%);
+  margin: 0 0 ($gutter / 2); // 0 0 15px
+  padding: $gutter / 2; // 15px
+  color: $light-color;
+  border-radius: 7px;
+
+  @include bg-color;
+  
+  h3 {
+    border-bottom: 1px solid lighten($dark-color, 20%);
+    margin-top: 5px;
+    padding-bottom: 10px;
+    font-family: $header-font;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+  }
+
+  p {
+    line-height: 2em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.widget-search {
+
+  @extend %widget;
+  
+  // &__title {}
+
+  &__form {
+    position: relative;
+    margin: 15px 0 7px;
+
+    &-input {
+      width: 100%;
+      padding: 7px 8px 7px 40px;
+      border: 1px solid rgba($light-color, 0.15);
+      border-radius: 4px;
+      // text-overflow: ellipsis;
+      color: $gray-color;
+      font-size: 12px;
+
+      @include bg-color(0.1, $light-color);
+
+      &:focus {
+        outline: none;
+        border: 1px solid rgba($light-color, 0.3);
+        color: $light-color;
+
+        @include bg-color(0.2, $light-color);
+      }
+
+      &::placeholder {
+        color: $gray-color;
+      }
+    }
+
+    &-btn {
+      position: absolute;
+      padding: 5px 7px;
+      top: 1px;
+      bottom: 1px;
+      left: 1px;
+      border-left: none;
+      border-top: none;
+      border-bottom: none;
+      border-right: 1px solid rgba($light-color, 0.1);
+      background-color: transparent;
+      color: $light-color;
+
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+
+

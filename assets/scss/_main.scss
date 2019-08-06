@@ -1,5 +1,6 @@
 .main {
   flex-grow: 1;
+  order: 2;
 
   /* main-breadcrumbs */
   &-breadcrumbs {
@@ -22,7 +23,7 @@
     span {
       color: $gray-color;
       margin-right: 7px;
-      // position: relative;
+      position: relative;
     }
 
     i {
@@ -110,15 +111,10 @@
           }
           /* / grid-item__container-title */
           
-          &-img {
+          // &-img {
 
-            .item-img {
-              display: block;
-              width: 100%;
-              max-width: 100%;
-              height: auto;
-            }
-          }
+            
+          // }
 
           &-description {
             position: absolute;
@@ -159,4 +155,20 @@
     }
   }
   /* main-content */
+
+  @include lg-min {
+    flex: 0 0 calc(100% - #{$left-sidebar-width} - #{$right-sidebar-width});
+    padding-right: $gutter;
+    padding-left: $gutter;
+  }
+
+  @include lg-md {
+    flex: 0 0 calc(100% - #{$left-sidebar-width});
+    padding-right: 0;
+    padding-left: $gutter;
+  }
+
+  @include md {
+    order: 1;
+  }
 }

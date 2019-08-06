@@ -4,6 +4,7 @@
 @import "skin";
 @import "mixins";
 @import "mixins-media";
+@import "extends";
 
 @import "common";
 @import "header/header";
@@ -12,7 +13,7 @@
 @import "main";
 @import "aside/left";
 @import "aside/right";
-@import "widgets/widgets";
+@import "widgets/info";
 @import "widgets/search";
 @import "widgets/categories";
 @import "widgets/news";

@@ -1,0 +1,19 @@
+.aside-left {
+  @include md-min {
+    flex: 0 0 $left-sidebar-width;
+    margin-bottom: $gutter / 2; // 15px
+    order: 1;
+  }
+
+  @include md-xs {
+    width: 50%;
+    padding-right: $gutter / 4; // 7.5px
+    order: 2;
+  }
+
+  @include xs {
+    width: 100%;
+    margin-bottom: 0;
+    order: 2;
+  }
+}

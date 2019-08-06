@@ -1,0 +1,83 @@
+.widget-news {
+
+  @extend %widget;
+
+  // &__title {}
+  
+  // &__content {}
+}
+.widget-item {
+
+  &__container {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &-title {
+
+      margin: 0 0 10px;
+      font-weight: 300;
+      letter-spacing: 1px;
+
+      @include text-cropped; // обрезает однострочный текст и добавляет троеточие...
+    }
+    
+    &-img {
+      overflow: hidden;
+      width: 75px;
+      height: 75px;
+      border-radius: 4px;
+
+      .item-img {
+        transition: transform 0.5s;
+      }
+    }
+
+    &-description {
+      width: calc(100% - 75px);
+      max-height: 75px;
+      padding-left: 10px;
+      margin-bottom: 15px;
+      transition: color 0.5s;
+      color: $gray-color;
+      font-size: 13px;
+      line-height: 20px;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: wrap;
+      display: -webkit-box; // Интересное решение обрезки многострочного текста с "..." для браузеров Webkit. В реальных проектах лучше избегать.
+      -webkit-line-clamp: 4; // количество строк, выводимое в блоке;
+      -webkit-box-orient: vertical
+    }
+  }
+
+  a:hover {
+
+    .widget-item__container-title {
+        @include text-shadow;
+    }
+
+    .item-img {
+        transform: scale(1.2);
+    }
+
+    .widget-item__container {
+      background: radial-gradient(ellipse at center, rgba($dark-color, 0.6) 0%,rgba($dark-color, 0) 100%);
+      /* функция radial-gradient() создает картинку состоящую из последовательных
+      переходов между двумя и более цветами, которые исходят из заданного центра. 
+      Они могут принимать форму круга или эллипса. 
+      at center - позиция
+      rgba($dark-color, 0.6) 0% - начальный цвет
+      rgba($dark-color, 0) 100% - конечный цвет */
+    }
+
+    .widget-item__container-description {
+        color: $light-color;
+    }
+  }
+
+  // a:visited {
+  //   color: $light-color;
+  // }
+}

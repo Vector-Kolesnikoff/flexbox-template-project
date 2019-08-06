@@ -1,0 +1,25 @@
+.aside-right {
+  order: 3;
+
+  @include lg-min {
+    flex: 0 0 $right-sidebar-width;
+    margin-bottom: $gutter / 2; // 15px
+
+    .widget-news {
+      width: $right-sidebar-width;
+    }
+  }
+
+  @include lg-md {
+    width: 100%;
+  }
+
+  @include lg-xs {
+    width: 50%;
+    padding-left: $gutter / 4; // 7.5px
+  }
+
+  @include xs {
+    width: 100%;
+  }
+}

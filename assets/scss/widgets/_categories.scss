@@ -1,0 +1,30 @@
+.widget-categories {
+
+  @extend %widget;
+  
+  // &__title {}
+
+  &__list {
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &-item {
+      a {
+        display: block;
+        padding: 5px 0;
+        border-radius: 4px;
+        transition: padding-left 0.5s;
+
+        &:hover {
+          color: $main-color;
+          padding-left: 10px;
+
+          @include bg-color;
+          @include text-shadow;
+        }
+      }
+    }
+  }
+}
