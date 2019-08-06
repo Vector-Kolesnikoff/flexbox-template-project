@@ -47,10 +47,7 @@ a {
 
 .outer {
   display: flex;
-
-  @include lg {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
 }
 
 .item-img {

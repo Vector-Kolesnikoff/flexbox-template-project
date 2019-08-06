@@ -3,11 +3,11 @@
 // }
 
 @mixin text-shadow {
-  text-shadow: 1px 1px 3px $dark-color, 1px 1px 10px $dark-color;
+  text-shadow: 1px 1px 3px $dark-color, 1px 1px 10px $dark-color; // миксин для тени текста
 }
 
-@mixin bg-color($alfa: 0.5, $color: $dark-color) {
-  background: rgba($color, $alfa);
+@mixin bg-color($alpha: 0.5, $color: $dark-color) { // создал миксин с переменными чтобы потом издеваться над готовым цветом.
+  background: rgba($color, $alpha); 
 }
 
 @mixin text-cropped {

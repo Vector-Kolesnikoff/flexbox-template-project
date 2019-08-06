@@ -464,7 +464,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.widget-info, .widget-search, .widget-categories, .widget-news {
+.widget-info, .widgets__item-widget, .widget-search, .widget-categories, .widget-news {
   border-bottom: 1px solid #333333;
   margin: 0 0 15px;
   padding: 15px;
@@ -473,7 +473,7 @@ template {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.widget-info h3, .widget-search h3, .widget-categories h3, .widget-news h3 {
+.widget-info h3, .widgets__item-widget h3, .widget-search h3, .widget-categories h3, .widget-news h3 {
   border-bottom: 1px solid #333333;
   margin-top: 5px;
   padding-bottom: 10px;
@@ -482,11 +482,11 @@ template {
   letter-spacing: 1.5px;
 }
 
-.widget-info p, .widget-search p, .widget-categories p, .widget-news p {
+.widget-info p, .widgets__item-widget p, .widget-search p, .widget-categories p, .widget-news p {
   line-height: 2em;
 }
 
-.widget-info p:last-child, .widget-search p:last-child, .widget-categories p:last-child, .widget-news p:last-child {
+.widget-info p:last-child, .widgets__item-widget p:last-child, .widget-search p:last-child, .widget-categories p:last-child, .widget-news p:last-child {
   margin-bottom: 0;
 }
 
@@ -529,6 +529,8 @@ a:hover, a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .item-img {
@@ -826,6 +828,22 @@ a:hover, a:focus {
           order: 3;
 }
 
+.widgets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -7.5px;
+  margin-left: -7.5px;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+
+.widgets__item {
+  padding: 0 7.5px;
+  color: #eeeeee;
+}
+
 .widget-search__form {
   position: relative;
   margin: 15px 0 7px;
@@ -1029,6 +1047,11 @@ a:hover, a:focus {
         -ms-flex-order: 1;
             order: 1;
   }
+  .widgets__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1056,10 +1079,6 @@ a:hover, a:focus {
 @media (max-width: 1199.8px) {
   body {
     padding: 0 15px;
-  }
-  .outer {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
 }
 
@@ -1089,6 +1108,10 @@ a:hover, a:focus {
         -ms-flex-order: 1;
             order: 1;
   }
+  .widgets {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 991.8px) and (min-width: 576px) {
@@ -1098,6 +1121,11 @@ a:hover, a:focus {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+  .widgets__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
   }
 }
 
@@ -1165,6 +1193,9 @@ a:hover, a:focus {
             order: 2;
   }
   .aside-right {
+    width: 100%;
+  }
+  .widgets__item {
     width: 100%;
   }
 }
