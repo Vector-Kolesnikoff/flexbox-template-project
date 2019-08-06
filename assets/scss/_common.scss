@@ -20,11 +20,10 @@ body {
   width: 100%;
   max-width: $xl;
 
-  // margin: 0 auto;
-  // overflow-x: hidden;
-
-  // transition: opacity 1s ease 0s;
-  // opacity: 1;
+  margin: 0 auto;
+  overflow-x: hidden;
+  transition: opacity 1s ease 0s;
+  opacity: 1;
 
   @include lg-min {
     padding: 0 $gutter;
@@ -56,17 +55,3 @@ a {
   max-width: 100%;
   height: auto;
 }
-
-// p {
-//   color: $gray-color;
-// }
-
-
-
-// .img-responsive {
-//   display: block;
-
-//   width: 100%;
-//   max-width: 100%;
-//   height: auto;
-// }

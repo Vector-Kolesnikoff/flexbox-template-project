@@ -1,0 +1,13 @@
+.footer {
+  margin-bottom: $gutter;
+  text-align: center;
+
+  &__widget {
+
+    @extend %widget;
+
+    h3 {
+      margin: 0 auto;
+    }
+  }
+}

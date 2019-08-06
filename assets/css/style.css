@@ -464,7 +464,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.widget-info, .widgets__item-widget, .widget-search, .widget-categories, .widget-news {
+.widget-info, .widgets__item-widget, .widget-search, .widget-categories, .widget-news, .footer__widget {
   border-bottom: 1px solid #333333;
   margin: 0 0 15px;
   padding: 15px;
@@ -473,7 +473,7 @@ template {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.widget-info h3, .widgets__item-widget h3, .widget-search h3, .widget-categories h3, .widget-news h3 {
+.widget-info h3, .widgets__item-widget h3, .widget-search h3, .widget-categories h3, .widget-news h3, .footer__widget h3 {
   border-bottom: 1px solid #333333;
   margin-top: 5px;
   padding-bottom: 10px;
@@ -482,11 +482,11 @@ template {
   letter-spacing: 1.5px;
 }
 
-.widget-info p, .widgets__item-widget p, .widget-search p, .widget-categories p, .widget-news p {
+.widget-info p, .widgets__item-widget p, .widget-search p, .widget-categories p, .widget-news p, .footer__widget p {
   line-height: 2em;
 }
 
-.widget-info p:last-child, .widgets__item-widget p:last-child, .widget-search p:last-child, .widget-categories p:last-child, .widget-news p:last-child {
+.widget-info p:last-child, .widgets__item-widget p:last-child, .widget-search p:last-child, .widget-categories p:last-child, .widget-news p:last-child, .footer__widget p:last-child {
   margin-bottom: 0;
 }
 
@@ -514,6 +514,12 @@ body {
   background-size: cover;
   width: 100%;
   max-width: 1380px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  -webkit-transition: opacity 1s ease 0s;
+  -o-transition: opacity 1s ease 0s;
+  transition: opacity 1s ease 0s;
+  opacity: 1;
 }
 
 a {
@@ -914,15 +920,15 @@ a:hover, a:focus {
 .widget-categories__list-item a {
   display: block;
   padding: 5px 0;
-  border-radius: 4px;
   -webkit-transition: padding-left 0.5s;
   -o-transition: padding-left 0.5s;
   transition: padding-left 0.5s;
+  border-radius: 4px;
 }
 
 .widget-categories__list-item a:hover {
-  color: #e12727;
   padding-left: 10px;
+  color: #e12727;
   background: rgba(0, 0, 0, 0.5);
   text-shadow: 1px 1px 3px #000000, 1px 1px 10px #000000;
 }
@@ -1005,6 +1011,15 @@ a:hover, a:focus {
 
 .widget-item a:hover .widget-item__container-description {
   color: #eeeeee;
+}
+
+.footer {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.footer__widget h3 {
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {

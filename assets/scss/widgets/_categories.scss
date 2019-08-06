@@ -1,8 +1,6 @@
 .widget-categories {
 
   @extend %widget;
-  
-  // &__title {}
 
   &__list {
 
@@ -11,16 +9,17 @@
     list-style: none;
 
     &-item {
+      
       a {
         display: block;
         padding: 5px 0;
-        border-radius: 4px;
         transition: padding-left 0.5s;
-
+        border-radius: 4px;
+        
         &:hover {
-          color: $main-color;
           padding-left: 10px;
-
+          color: $main-color;
+          
           @include bg-color;
           @include text-shadow;
         }

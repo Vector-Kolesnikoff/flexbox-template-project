@@ -10,18 +10,20 @@
   <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="libs/@fortawesome/fontawesome-free/css/all.min.css">
-  <!-- <style>body { opacity: 0; background-color: #d8b036; } html { overflow: hidden; }</style> -->
+  <style>body { opacity: 0; background-color: #d8b036; } html { overflow: hidden; }</style>
 </head>
 
 <body>
 
+  <!-- header -->
   <header class="header">
     <div class="header-logo">
-      <img class="header-logo__img" src="assets/img/logo.png" alt="">  <!-- image -> img -->
+      <img class="header-logo__img" src="assets/img/logo.png" alt=""> 
       <strong class="header-logo__title">FLEXBOX TEMPLATE</strong>
       <span class="header-logo__subtitle">Шаблон с применением flexbox для первого модуля, курса Front-end Web Development</span> <!-- description -> subtitle -->
     </div>
 
+    <!-- nav -->
     <nav class="header-menu"> 
       <div class="header-menu__burger"> 
         <div class="header-menu__burger-line"></div>
@@ -36,8 +38,11 @@
         <li class="header-menu__list-item"><a href="#">О нас</a></li>
       </ul>
     </nav>
+    <!-- / nav -->
   </header>
+  <!-- / header -->
 
+  <!-- outer -->
   <div class="outer">
 
     <!-- main -->
@@ -223,7 +228,7 @@
 
     <!-- aside-left -->
     <aside class="aside-left">
-      <div class="widget-search"> <!-- %w -->
+      <div class="widget-search"> 
         <h3 class="widget-search__title">Поиск по сайту</h3>
         <form class="widget-search__form" action="#" method="get">
           <input class="widget-search__form-input" type="text" placeholder="Введите текст...">
@@ -232,7 +237,7 @@
           </button>
         </form>
       </div>
-      <div class="widget-categories"> <!-- %w -->
+      <div class="widget-categories"> 
         <h3 class="widget-categories__title">Категории</h3>
         <ul class="widget-categories__list">
           <li class="widget-categories__list-item"><a href="#">HTML4 / HTML5</a></li>
@@ -245,7 +250,7 @@
           <li class="widget-categories__list-item"><a href="#">Bootstrap</a></li>
         </ul>
       </div>
-      <div class="widget-info"> <!-- %w -->
+      <div class="widget-info"> 
         <h3 class="widget-info__title">О шаблоне</h3>
         <p class="widget-info__text">Шаблон разработан для изучения адаптивной верстки на HTML5, оформления с помощью CSS3, подключения готовых библиотек и плагинов Jquery.</p>
       </div>
@@ -343,24 +348,32 @@
     
     <!-- widgets -->
     <div class="widgets">
+
+      <!-- widgets__item #1 -->
       <div class="widgets__item">
         <div class="widgets__item-widget">
           <h3>Заголовок виджета</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, adipisci aliquam animi at atque blanditiis doloremque eligendi id laborum molestiae mollitia omnis porro praesentium quis quisquam sit tempore, voluptatem voluptatibus.</p>
         </div>
       </div>
+
+      <!-- widgets__item #2 -->
       <div class="widgets__item">
         <div class="widgets__item-widget">
           <h3>Заголовок виджета</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut error nisi quam, repellat suscipit voluptate?</p>
         </div>
       </div>
+
+      <!-- widgets__item #3 -->
       <div class="widgets__item">
         <div class="widgets__item-widget">
           <h3>Заголовок виджета</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam ea excepturi magnam minima nulla odit veniam veritatis. Delectus porro possimus quam repudiandae sapiente. Animi architecto hic quasi repellendus ullam.</p>
         </div>
       </div>
+
+      <!-- widgets__item #4 -->
       <div class="widgets__item">
         <div class="widgets__item-widget">
           <h3>Заголовок виджета</h3>
@@ -369,18 +382,17 @@
       </div>
     </div>
     <!-- / widgets -->
+  </div>
+  <!-- / outer -->
 
-    <!-- footer -->
-    <footer class="footer">
-      <div class="footer__container"></div>
+  <!-- footer -->
+  <footer class="footer">
+      <div class="footer__widget">
+        <h3 >Заголовок виджета</h3>
+        <p>Обычный текст виджета...</p>
+      </div>
     </footer>
     <!-- / footer -->
-
-
-
-
-  </div>
-
 
   <link rel="stylesheet" href="assets/css/style.css">
 
