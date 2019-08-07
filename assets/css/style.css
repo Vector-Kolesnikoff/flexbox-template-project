@@ -515,7 +515,6 @@ body {
   width: 100%;
   max-width: 1380px;
   margin: 0 auto;
-  overflow-x: hidden;
   -webkit-transition: opacity 1s ease 0s;
   -o-transition: opacity 1s ease 0s;
   transition: opacity 1s ease 0s;

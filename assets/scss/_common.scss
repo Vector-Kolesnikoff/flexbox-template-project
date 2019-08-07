@@ -19,9 +19,8 @@ body {
   background-size: cover;
   width: 100%;
   max-width: $xl;
-
   margin: 0 auto;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   transition: opacity 1s ease 0s;
   opacity: 1;
 
